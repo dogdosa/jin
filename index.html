@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<style>
-body {
-      background-image: url('26.jpg');
-      background-size: cover;
-      min-height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-</style>
-<title>dogdosa LOVE hyun</title>
+  <meta charset="utf-8">
+<title>로그인 화면</title>
+<script>
+var hyung = 0;
+function pwChk() {
+if(document.frm1.ID.value == "jin") {
+ if(document.frm1.pw.value == "8888"){
+  alert("로그인이다.가자!")
+  hyung = 2;
+}
+  else {
+  alert("비밀번호 틀려")
+}
+}
+else if(document.frm1.ID.value == "hyun") {
+ if(document.frm1.pw.value == "8888"){
+  alert("사랑하는 현이가 입장했다!")
+  hyung = 2;
+}
+  else {
+  alert("비밀번호 잘 써야지")
+}
+}
+else  {
+alert("아이디랑 비밀번호 잘 써봐~")
+}
+if(hyung==2)
+   location.href="main.html";
+}
+</script>
+<center>
+<img src="C:\Users\김진형\Dropbox\Javascript 실행파일\26.jpg" width=50%>
+</center>
 </head>
 <body>
-  현이 사랑해
-  <ul>
-    <h2><li><a href ="1.html" target="_blank">사진첩 </a></li></h2>
-    <h2><li><a href="2.html" target="_blank">도요니</a></li></h2>
-    <h2><li><a href="3.html" target="_blank">글쓰기</a></li></h2>
-    <h2><li><a href="4.html" target="_blank">공부</a></li></h2>
-  </ul>
+  <center>
+<form name="frm1">
+<b>ID :</b> <input type="ID" placeholder="ID 잘 써야해~" size=12 name="ID">
+<b>비밀번호 :</b> <input type="password" placeholder="비번도 잘 써야해~" size=15 name="pw"><br><br>
+<input type="button" value="로그인" onClick="pwChk()">
+</form>
+</center>
 </body>
 </html>
